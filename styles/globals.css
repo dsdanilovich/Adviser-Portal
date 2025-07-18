@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  --font-size: 14px;
+  /* Updated to match Figma design colors */
+  --background: rgba(238, 238, 238, 1.00);
+  --foreground: rgba(22, 22, 22, 1.00);
+  --card: rgba(255, 255, 255, 1.00);
+  --card-foreground: rgba(22, 22, 22, 1.00);
+  --popover: rgba(255, 255, 255, 1.00);
+  --popover-foreground: rgba(22, 22, 22, 1.00);
+  --primary: rgba(15, 98, 254, 1.00);
+  --primary-foreground: rgba(255, 255, 255, 1.00);
+  --secondary: rgba(244, 244, 244, 1.00);
+  --secondary-foreground: rgba(22, 22, 22, 1.00);
+  --muted: rgba(198, 198, 198, 1.00);
+  --muted-foreground: rgba(110, 110, 110, 1.00);
+  --accent: rgba(15, 98, 254, 1.00);
+  --accent-foreground: rgba(255, 255, 255, 1.00);
+  --destructive: rgba(218, 30, 40, 1.00);
+  --destructive-foreground: rgba(255, 255, 255, 1.00);
+  --border: rgba(224, 224, 224, 1.00);
+  --input: rgba(0, 0, 0, 0);
+  --input-background: rgba(244, 244, 244, 1.00);
+  --ring: rgba(15, 98, 254, 1.00);
+  --elevation-sm: 0px 2px 6px -2px rgba(0, 0, 0, 0.1);
+  --chart-1: rgba(15, 98, 254, 1.00);
+  --chart-2: rgba(36, 161, 72, 1.00);
+  --chart-3: rgba(218, 30, 40, 1.00);
+  --chart-4: rgba(147, 51, 234, 1.00);
+  --chart-5: rgba(99, 102, 241, 1.00);
+  --radius: 8px;
+  --radius-md: 4px;
+  --radius-lg: 12px;
+  --radius-full: 9999px;
+  --sidebar: rgba(44, 48, 58, 1.00);
+  --sidebar-foreground: rgba(255, 255, 255, 1.00);
+  --sidebar-primary: rgba(255, 255, 255, 1.00);
+  --sidebar-primary-foreground: rgba(44, 48, 58, 1.00);
+  --sidebar-accent: rgba(21, 21, 23, 1.00);
+  --sidebar-accent-foreground: rgba(255, 255, 255, 1.00);
+  --sidebar-border: rgba(198, 198, 198, 1.00);
+  --sidebar-ring: rgba(15, 98, 254, 1.00);
+  
+  /* Typography variables matching Figma design */
+  --text-2xl: 25px;
+  --text-xl: 19px;
+  --text-lg: 16px;
+  --text-base: 14px;
+  --text-sm: 12px;
+  --font-weight-bold: 700;
+  --font-weight-semibold: 600;
+  --font-weight-medium: 500;
+  --font-weight-regular: 400;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-input-background: var(--input-background);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: var(--radius-md);
+  --radius-lg: var(--radius-lg);
+  --radius-full: var(--radius-full);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --shadow-sm: var(--elevation-sm);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', sans-serif;
+  }
+}
+
+/* Typography matching Figma design */
+h1 {
+  font-family: 'Inter', sans-serif;
+  font-size: var(--text-2xl);
+  font-weight: var(--font-weight-bold);
+  line-height: 36px;
+}
+
+h2 {
+  font-family: 'Inter', sans-serif;
+  font-size: var(--text-xl);
+  font-weight: var(--font-weight-bold);
+  line-height: 28px;
+}
+
+h3 {
+  font-family: 'Inter', sans-serif;
+  font-size: var(--text-lg);
+  font-weight: var(--font-weight-semibold);
+  line-height: 24px;
+}
+
+h4 {
+  font-family: 'Inter', sans-serif;
+  font-size: var(--text-base);
+  font-weight: var(--font-weight-semibold);
+  line-height: 18px;
+}
+
+h5 {
+  font-family: 'Inter', sans-serif;
+  font-size: var(--text-base);
+  font-weight: var(--font-weight-semibold);
+  line-height: 20px;
+}
+
+p {
+  font-family: 'Inter', sans-serif;
+  font-size: var(--text-base);
+  font-weight: var(--font-weight-regular);
+  line-height: 20px;
+}
+
+span {
+  font-family: 'Inter', sans-serif;
+  font-size: var(--text-base);
+  font-weight: var(--font-weight-regular);
+  line-height: 18px;
+}
+
+label {
+  font-family: 'Inter', sans-serif;
+  font-size: var(--text-sm);
+  font-weight: var(--font-weight-semibold);
+  line-height: 16px;
+}
+
+small {
+  font-family: 'Inter', sans-serif;
+  font-size: var(--text-sm);
+  font-weight: var(--font-weight-regular);
+  line-height: 16px;
+}
+
+button {
+  font-family: 'Inter', sans-serif;
+  font-size: var(--text-base);
+  font-weight: var(--font-weight-semibold);
+  line-height: 18px;
+}
+
+.button-large {
+  font-family: 'Inter', sans-serif;
+  font-size: var(--text-lg);
+  font-weight: var(--font-weight-semibold);
+  line-height: 20px;
+}
+
+.table-header {
+  font-family: 'Inter', sans-serif;
+  font-size: var(--text-sm);
+  font-weight: var(--font-weight-semibold);
+  line-height: 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+}
+
+input {
+  font-family: 'Inter', sans-serif;
+  font-size: var(--text-base);
+  font-weight: var(--font-weight-regular);
+  line-height: 20px;
+}
+
+html {
+  font-size: var(--font-size);
+  font-family: 'Inter', sans-serif;
+}
+
+/* Custom styles for the professional design */
+.card-shadow {
+  box-shadow: 0px 2px 6px -2px rgba(0, 0, 0, 0.1);
+}
+
+.enterprise-nav {
+  background: #2c303a;
+}
+
+.enterprise-nav-active {
+  background: #151517;
+}
+
+.tab-border-active {
+  border-bottom: 2px solid #0f62fe;
+}
+
+.tab-border-inactive {
+  border-bottom: 1px solid #c6c6c6;
+}
+
+.status-success {
+  color: #24a148;
+}
+
+.status-draft {
+  color: #8e8e8e;
+}
+
+.breadcrumb-text {
+  color: rgba(0, 0, 0, 0.87);
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.breadcrumb-current {
+  color: #6e6e6e;
+  font-size: 14px;
+  line-height: 18px;
+}
